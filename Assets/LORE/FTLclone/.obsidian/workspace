@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "8be1c1ef14e9d4fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "858efb79a23c612c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "FTLC description.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4c989996f3b8b4c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "a8e4424486c592e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "36f90c90e735476c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "54343147bad345cb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f3faafcf71efd1a0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2ba221cbd8100cae",
+    "type": "split",
+    "children": [
+      {
+        "id": "d87ccba173241baf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2b40c0128c40b3b8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "FTLC description.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bd5a03ec972bc08b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "FTLC description.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4f26643bc7815c24",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "50484a0f5cee4ae9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "FTLC description.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "858efb79a23c612c",
+  "lastOpenFiles": [
+    "Теrrа.md",
+    "Terra.md",
+    "FTLC description.md",
+    "кочевники.md",
+    "Tiers.md",
+    "Узловая станция.md",
+    "CSY templates/CSY longsword.md",
+    "CSY templates/CSY  claw.md",
+    "CSY templates/CSY barge.md",
+    "CSY templates/CSY miner.md"
+  ]
+}
