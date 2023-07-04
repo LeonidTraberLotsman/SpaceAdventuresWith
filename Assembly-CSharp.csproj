@@ -61,6 +61,7 @@
     <Compile Include="Assets\scripts\Building\WestDoor.cs" />
     <Compile Include="Assets\scripts\ItemRepresent.cs" />
     <Compile Include="Assets\scripts\Building\Floor.cs" />
+    <Compile Include="Assets\scripts\ShipGen.cs" />
     <Compile Include="Assets\scripts\Building\ActiveFurniture\O2Generator.cs" />
     <Compile Include="Assets\scripts\Building\ActiveFurniture\core_crystall.cs" />
     <Compile Include="Assets\scripts\tool.cs" />
@@ -94,7 +95,6 @@
     <Compile Include="Assets\scripts\Building\ActiveFurniture\guns\flame_gun.cs" />
     <Compile Include="Assets\scripts\Building\ActiveFurniture\crafter.cs" />
     <Compile Include="Assets\scripts\Building\ActiveFurniture\ActiveFurniture.cs" />
-    <Compile Include="Assets\scripts\ShipGen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\block_list.txt" />

@@ -18,6 +18,30 @@ public class ShipManager : MonoBehaviour
     Room spaceRoom;
     public List<Room> rooms = new List<Room>();
 
+    public List<Character.Task> tasks = new List<Character.Task>();
+    public List<Character> crew = new List<Character>();
+
+    public IEnumerator ManageTasks()
+    {
+        while (true)
+        {
+            yield return null;
+            foreach (Character Crew_member in crew)
+            {
+                if (Crew_member.State != Character.human_state.dead)
+                {
+                    if (Crew_member.my_tasks.Count < 1)
+                    {
+                        Crew_member.my_tasks.Add(tasks[0]);
+                        StartCoroutine(Crew_member.DoTasks());
+                    }
+                }
+            }
+
+        }
+        
+    }
+
     public class Room
     {
         public int num;
@@ -452,4 +476,7 @@ public class ShipManager : MonoBehaviour
         Debug.Log(potential.transform.name);
 
     }
+
+
+   
 }
