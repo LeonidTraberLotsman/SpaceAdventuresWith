@@ -21,11 +21,16 @@ public class GUI : MonoBehaviour
 
     public List<GameObject> Buttons;
     Vector3 BuildingRotation= new Vector3();
-    
-    public enum Mode { None, Build,CrewManagment}
+
+    public GameObject consumer_hud_prefab;
+
+    public enum Mode { None, Build,CrewManagment,EnergyManagment}
 
     public GameObject button_prefab;
     public List<GameObject> temp_buttons = new List<GameObject>();
+
+    List<energy_hud> energy_Huds = new List<energy_hud>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -152,9 +157,38 @@ public class GUI : MonoBehaviour
         }
 
     }
+
+    void ShowConsumers()
+    {
+        foreach (ActiveFurniture furniture in shipManager.furnitures)
+        {
+            GameObject hud = Instantiate(consumer_hud_prefab);
+            hud.transform.position = furniture.transform.position + Vector3.up*1f;
+            energy_hud e_hud= hud.GetComponent<energy_hud>();
+            e_hud.furniture = furniture;
+            e_hud.ship = shipManager;
+            energy_Huds.Add(e_hud);
+        }
+    }
+
+    //void DeleteConsumers()
+    //{
+    //    foreach (energy_hud hud in energy_Huds.ToArray())
+    //    {
+    //        Destroy(hud.gameObject);
+    //    }
+    //    energy_Huds = new List<energy_hud>();
+    //}
+
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyUp(KeyCode.X) && mode == Mode.None)
+        {
+            ChangeMode(Mode.EnergyManagment);
+           
+
+        }
         if (Input.GetKeyUp(KeyCode.B) && mode==Mode.None)
         {
             ChangeMode(Mode.Build);
@@ -240,6 +274,11 @@ public class GUI : MonoBehaviour
             if (mode == Mode.CrewManagment)
             {
                 CrewManagmentCanvas.SetActive(false);
+                
+            }
+
+            if (mode == Mode.EnergyManagment)
+            {
                 ChangeMode(Mode.None);
             }
         }
@@ -248,7 +287,7 @@ public class GUI : MonoBehaviour
 
     void ChangeMode(Mode newMode)
     {
-        mode = newMode;
+        
 
         if (mode == Mode.Build)
         {
@@ -259,6 +298,11 @@ public class GUI : MonoBehaviour
             }
         }
 
+        //if (mode == Mode.EnergyManagment)
+        //{
+        //    DeleteConsumers();
+        //}
+
         if (mode == Mode.CrewManagment)
         {
             if (potential != null)
@@ -267,6 +311,9 @@ public class GUI : MonoBehaviour
                 potential = null;
             }
         }
+
+        
+
 
         if (newMode==Mode.Build)
         {
@@ -277,6 +324,13 @@ public class GUI : MonoBehaviour
         {
             CrewManagmentCanvas.SetActive(true);
         }
+        if (newMode == Mode.EnergyManagment)
+        {
+            ShowConsumers();
+            Debug.Log("0_0");
+        }
+
+        mode = newMode;
     }
 
     public void SaveButtonClick()

@@ -15,6 +15,7 @@ ScriptsOnlyBuild:
     - NorthWall
     - O2Generator
     - Reactor
+    - ShipGen
     - ShipManager
     - WestDoor
     - WestWall
@@ -102,79 +103,81 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1546}
+      Script: {instanceID: 1734}
     - Class: 114
-      Script: {instanceID: 1552}
+      Script: {instanceID: 1740}
     - Class: 114
-      Script: {instanceID: 1554}
+      Script: {instanceID: 1742}
     - Class: 114
-      Script: {instanceID: 1566}
+      Script: {instanceID: 1754}
     - Class: 114
-      Script: {instanceID: 1690}
+      Script: {instanceID: 1878}
     - Class: 114
-      Script: {instanceID: 1746}
+      Script: {instanceID: 1884}
     - Class: 114
-      Script: {instanceID: 1790}
+      Script: {instanceID: 1936}
     - Class: 114
-      Script: {instanceID: 2000}
+      Script: {instanceID: 1980}
     - Class: 114
-      Script: {instanceID: 2178}
+      Script: {instanceID: 2190}
     - Class: 114
-      Script: {instanceID: 2184}
+      Script: {instanceID: 2368}
     - Class: 114
-      Script: {instanceID: 2250}
+      Script: {instanceID: 2374}
     - Class: 114
-      Script: {instanceID: 2274}
+      Script: {instanceID: 2440}
     - Class: 114
-      Script: {instanceID: 2372}
+      Script: {instanceID: 2464}
     - Class: 114
-      Script: {instanceID: 2418}
+      Script: {instanceID: 2562}
     - Class: 114
-      Script: {instanceID: 2426}
+      Script: {instanceID: 2608}
     - Class: 114
-      Script: {instanceID: 2520}
+      Script: {instanceID: 2616}
     - Class: 114
-      Script: {instanceID: 2566}
+      Script: {instanceID: 2710}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2756}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2784}
     - Class: 114
-      Script: {instanceID: 2672}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2690}
+      Script: {instanceID: 2862}
     - Class: 114
-      Script: {instanceID: 2772}
+      Script: {instanceID: 2880}
     - Class: 114
-      Script: {instanceID: 2786}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 2926}
+      Script: {instanceID: 2976}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 3388}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 3608}
+      Script: {instanceID: 3578}
     - Class: 114
-      Script: {instanceID: 3620}
+      Script: {instanceID: 3798}
     - Class: 114
-      Script: {instanceID: 3718}
+      Script: {instanceID: 3810}
     - Class: 114
-      Script: {instanceID: 3742}
+      Script: {instanceID: 3908}
     - Class: 114
-      Script: {instanceID: 3768}
+      Script: {instanceID: 3932}
     - Class: 114
-      Script: {instanceID: 3842}
+      Script: {instanceID: 3958}
     - Class: 114
-      Script: {instanceID: 3892}
+      Script: {instanceID: 4032}
     - Class: 114
-      Script: {instanceID: 3990}
+      Script: {instanceID: 4082}
     - Class: 114
-      Script: {instanceID: 4062}
+      Script: {instanceID: 4180}
     - Class: 114
-      Script: {instanceID: 4064}
+      Script: {instanceID: 4252}
     - Class: 114
-      Script: {instanceID: 4134}
+      Script: {instanceID: 4254}
+    - Class: 114
+      Script: {instanceID: 4324}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -296,6 +299,12 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: a3484f0eddc94b39a5f1a0202f145846
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShipGen
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -308,7 +317,7 @@ ScriptsOnlyBuild:
     className: O2Generator
   - hash:
       serializedVersion: 2
-      Hash: e78765d93b37fe61ed100bbbc2be3ac6
+      Hash: 300fd99066f8c288e85f5e81ce65fe34
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
@@ -494,7 +503,7 @@ ScriptsOnlyBuild:
     className: Fridge
   - hash:
       serializedVersion: 2
-      Hash: 7006b48815ee6d3305acb35736443b66
+      Hash: 78bbf423656ba3bbd35bafcc0f4be0be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShipManager
@@ -770,13 +779,13 @@ ScriptsOnlyBuild:
     className: Reactor
   - hash:
       serializedVersion: 2
-      Hash: b4a1a9d5aa5c8ea16456ba8798e55ed5
+      Hash: 18d9f652c6b4ddcadb45e6d7e30196d8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Character
   - hash:
       serializedVersion: 2
-      Hash: 75de60bccbd35c2e82026d4a60733734
+      Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
@@ -843,4 +852,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/ImportantBackUp/Unity/FTLclone/Build/FTLclone.exe
+  playerPath: D:/Unity/SpaceAdventuresWith/Build/FTLclone.exe

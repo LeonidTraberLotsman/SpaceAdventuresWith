@@ -4,7 +4,10 @@ using UnityEngine;
 
 public abstract class ActiveFurniture : Building
 {
-    
+
+    public bool ON = true;
+    public int energy_use = 0;
+
     public Renderer Therenderer;
     // Start is called before the first frame update
 
@@ -58,5 +61,12 @@ public abstract class ActiveFurniture : Building
     void Update()
     {
         
+    }
+
+    public virtual IEnumerator Interact(Character that_character)
+    {
+        yield return (new Character.ReachPointTask(transform.position)).Do(that_character);
+        yield return null;
+        yield return new WaitForSeconds(5);
     }
 }

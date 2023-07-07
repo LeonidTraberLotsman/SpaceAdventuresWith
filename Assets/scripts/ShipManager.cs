@@ -21,16 +21,44 @@ public class ShipManager : MonoBehaviour
     public List<Character.Task> tasks = new List<Character.Task>();
     public List<Character> crew = new List<Character>();
 
+
+    public GameObject Crew_member_prefab;
+
+    public int free_energy = 0;
+
+    void ReCalculateEnergy()
+    {
+        free_energy = 0;
+        foreach (ActiveFurniture furniture in furnitures)
+        {
+            if (furniture.ON)
+            {
+                free_energy += furniture.energy_use;
+            }
+        }
+        if (free_energy < 0)
+        {
+            foreach (ActiveFurniture furniture in furnitures)
+            {
+                if (furniture.ON)
+                {
+                    furniture.ON = false;
+                }
+            }
+        }
+    }
+
     public IEnumerator ManageTasks()
     {
         while (true)
         {
             yield return null;
+            Debug.Log(crew.Count);
             foreach (Character Crew_member in crew)
             {
                 if (Crew_member.State != Character.human_state.dead)
                 {
-                    if (Crew_member.my_tasks.Count < 1)
+                    if (Crew_member.my_tasks.Count <1 && tasks.Count>0)
                     {
                         Crew_member.my_tasks.Add(tasks[0]);
                         StartCoroutine(Crew_member.DoTasks());
@@ -42,6 +70,14 @@ public class ShipManager : MonoBehaviour
         
     }
 
+
+    public void SpawnCrew()
+    {
+        GameObject that_guy= Instantiate(Crew_member_prefab);
+        Character character = that_guy.GetComponent<Character>();
+        crew.Add(character);
+
+    }
     public class Room
     {
         public int num;
@@ -127,6 +163,8 @@ public class ShipManager : MonoBehaviour
        
         }
         RecalculateRooms();
+        StartCoroutine(ManageTasks());
+        SpawnCrew();
     }
 
     public void RecalculateRooms()
@@ -474,6 +512,17 @@ public class ShipManager : MonoBehaviour
 
         Debug.Log("It works");
         Debug.Log(potential.transform.name);
+
+        //Fridge that_fridge = potential.GetComponent<Fridge>();
+        //if (that_fridge != null || what==3)
+        //{
+        //    Debug.Log("Fridge");
+        //    tasks.Add(new Character.InteractTask(that_fridge));
+        //}
+        //else
+        //{
+        //    Debug.Log("not Fridge:"+what.ToString());
+        //}
 
     }
 

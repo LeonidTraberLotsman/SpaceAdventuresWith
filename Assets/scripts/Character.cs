@@ -78,4 +78,18 @@ public class Character : MonoBehaviour
         }
     }
 
+    public class InteractTask : Task
+    {
+        public Fridge fridge;
+        public InteractTask(Fridge that_fridge)
+        {
+            fridge = that_fridge;
+        }
+
+        public override IEnumerator Do(Character that_character)
+        {
+            yield return fridge.Interact(that_character);
+        }
+    }
+
 }

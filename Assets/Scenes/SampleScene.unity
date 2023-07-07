@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.011412845, g: 0.011341339, b: 0.015608839, a: 1}
+  m_IndirectSpecularColor: {r: 0.011650439, g: 0.011358695, b: 0.015740994, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2648,6 +2648,8 @@ MonoBehaviour:
   - {fileID: 1753490458714407833, guid: 6642000eb5a1e3c469183be710eaa6dd, type: 3}
   - {fileID: 37332545843824252, guid: a5257052d2b59904b900105f7cfa0851, type: 3}
   crew: []
+  Crew_member_prefab: {fileID: 3356223217925780465, guid: fb1a75d58eb8cf34781d45dedbd2b170,
+    type: 3}
   markerPrefab: {fileID: 2036085475136033297, guid: f985d4cb5f40afa4ea234a6b88683993,
     type: 3}
   markers: []
@@ -3933,6 +3935,7 @@ MonoBehaviour:
   - {fileID: 1753490458714407833, guid: 6642000eb5a1e3c469183be710eaa6dd, type: 3}
   - {fileID: 37332545843824252, guid: a5257052d2b59904b900105f7cfa0851, type: 3}
   crew: []
+  Crew_member_prefab: {fileID: 0}
   markerPrefab: {fileID: 2036085475136033297, guid: f985d4cb5f40afa4ea234a6b88683993,
     type: 3}
   markers: []
